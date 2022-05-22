@@ -46,11 +46,11 @@ class RoomNewsRepositoryImpl @Inject constructor(
     // https://imgur.com/a/WbKd6It
 
     private val imageMap = mapOf (
-        1 to "https://i.imgur.com/hCeZ0oe.jpeg",
-        2 to "https://i.imgur.com/BIlCWyB.jpeg",
-        3 to "https://i.imgur.com/FhBIv9n.jpeg",
-        4 to "https://i.imgur.com/BdKk021.jpeg",
-        5 to "https://i.imgur.com/ZZQZC2U.jpeg")
+        1 to "http://lyceum8.perm.ru/images/9/pf3MZnq8Oos_1.jpg",
+        2 to "http://lyceum8.perm.ru/images/9/rod.jpg",
+        3 to "http://lyceum8.perm.ru/images/9/1_-_0001.jpg",
+        4 to "http://lyceum8.perm.ru/images/9/str-upr-diktant-1024x764.jpg",
+        5 to "http://lyceum8.perm.ru/images/6/perepis-1024x649.jpg")
 
     private val titleMap = mapOf (
         1 to "Бесплатные интенсивы для олимпиадников онлайн",
