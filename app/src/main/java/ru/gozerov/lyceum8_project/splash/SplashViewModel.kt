@@ -1,43 +1,40 @@
 package ru.gozerov.lyceum8_project.splash
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
-import kotlinx.coroutines.channels.BufferOverflow
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.shareIn
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import ru.gozerov.core.viewmodel.BaseViewModel
-import ru.gozerov.domain.entity.news.News
 import ru.gozerov.domain.usecase.GetRecentNewsUseCase
+import ru.gozerov.lyceum8_project.compose.screens.news.news_list.NewsList
+import ru.gozerov.lyceum8_project.compose.screens.splash.state_machine.SplashIntent
+import ru.gozerov.lyceum8_project.compose.screens.splash.state_machine.SplashViewState
+import ru.gozerov.lyceum8_project.compose.screens.splash.state_machine.SplashViewState.Loading
+import ru.gozerov.lyceum8_project.compose.screens.splash.state_machine.SplashViewState.SuccessLoading
 import javax.inject.Inject
 
-class SplashViewModel(
+@HiltViewModel
+class SplashViewModel @Inject constructor (
     private val getRecentNewsUseCase: GetRecentNewsUseCase
 
 ) : BaseViewModel() {
 
-    private val _event = MutableSharedFlow<List<News>>(0, 1, BufferOverflow.DROP_OLDEST)
-    val event = _event.shareIn(viewModelScope, SharingStarted.WhileSubscribed(), 0)
+    private val _viewState = MutableStateFlow<SplashViewState>(Loading)
+    val viewState: StateFlow<SplashViewState> = _viewState.asStateFlow()
 
-    init {
-        viewModelScope.launch {
-            getRecentNewsUseCase.execute().collect { newsList ->
-                _event.emit(newsList)
+    fun handleIntent(intent: SplashIntent) {
+        when (intent) {
+            is SplashIntent.EnterScreen -> {
+                viewModelScope.launch {
+                    val news = getRecentNewsUseCase.execute()
+                    delay(1000)
+                    _viewState.emit(SuccessLoading(NewsList(news)))
+                }
             }
         }
     }
 
-    class SplashViewModelFactory @Inject constructor(
-        private val getRecentNewsUseCase: GetRecentNewsUseCase
-    ): ViewModelProvider.Factory {
-
-        @Suppress("UNCHECKED_CAST")
-        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return SplashViewModel(getRecentNewsUseCase) as T
-        }
-
-    }
 
 }

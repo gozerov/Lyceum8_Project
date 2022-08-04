@@ -16,7 +16,7 @@ import ru.gozerov.lyceum8_project.databinding.FragmentTabsBinding
 
 class TabsFragment : Fragment(R.layout.fragment_tabs) {
 
-    private lateinit var childNavController: NavController
+   /* private lateinit var childNavController: NavController
 
     private val args: TabsFragmentArgs by navArgs()
 
@@ -82,5 +82,5 @@ class TabsFragment : Fragment(R.layout.fragment_tabs) {
     private val destinationListener: (NavController, NavDestination, Bundle?) -> Unit = { _, destination, _ ->
         binding.titleToolbar.text = destination.label
     }
-
+*/
 }

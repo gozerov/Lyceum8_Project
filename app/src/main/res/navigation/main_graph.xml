@@ -10,9 +10,9 @@
         android:name="ru.gozerov.lyceum8_project.screen.TabsFragment"
         android:label="TabsFragment"
         tools:layout="@layout/fragment_tabs">
-
+<!--
     <argument
         android:name="newsList"
-        app:argType="ru.gozerov.domain.entity.news.NewsList" />
+        app:argType="ru.gozerov.domain.entity.news.NewsList" />-->
     </fragment>
 </navigation>

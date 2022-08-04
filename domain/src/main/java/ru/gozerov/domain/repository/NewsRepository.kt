@@ -10,6 +10,6 @@ interface NewsRepository: Repository {
 
     suspend fun firstInitialization()
 
-    suspend fun getRecentNews() : Flow<List<News>>
+    suspend fun getRecentNews() : List<News>
 
 }

@@ -9,11 +9,10 @@ import androidx.lifecycle.lifecycleScope
 import ru.gozerov.lyceum8_project.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
-import ru.gozerov.domain.entity.news.NewsList
 import ru.gozerov.lyceum8_project.activity.MainActivity
-import ru.gozerov.lyceum8_project.singleton.appComponent
 import javax.inject.Inject
 
+/*
 @SuppressLint("CustomSplashScreen")
 class SplashActivity: AppCompatActivity() {
 
@@ -37,4 +36,4 @@ class SplashActivity: AppCompatActivity() {
         }
     }
 
-}
+}*/

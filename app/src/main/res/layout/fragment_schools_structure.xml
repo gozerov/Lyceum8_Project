@@ -15,7 +15,7 @@
         android:layout_marginTop="15dp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="К коллегиальным органам управления в МАОУ &quot;Лицей №8&quot; относятся:"
+        android:text="@string/title_management_structure"
         android:textSize="18sp"/>
 
 
@@ -29,7 +29,7 @@
         android:paddingHorizontal="15dp"
         android:textColor="@color/black"
         android:textSize="15sp"
-        android:text="Наблюдательный совет (в соответствии с ФЗ- 174), (Устав (изменения))\n\nОбщее собрание трудового коллектива (в соответствии с ФЗ-273), (Устав (изменения))\n\nПедагогический совет (в соответствии с ФЗ-273), (Устав (изменения) )\n\nУправляющий совет, (Устав (изменения) )"
+        android:text="@string/main_text_management_structure"
     />
 
 

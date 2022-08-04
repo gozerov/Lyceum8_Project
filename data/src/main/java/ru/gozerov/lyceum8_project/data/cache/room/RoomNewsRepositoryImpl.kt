@@ -12,8 +12,8 @@ import javax.inject.Inject
 class RoomNewsRepositoryImpl @Inject constructor(
     private val newsDao: NewsDao
 ): RoomNewsRepository {
-    override suspend fun getRecentNews(): Flow<List<DataNews>> = withContext(Dispatchers.IO){
-        return@withContext newsDao.getAllNews().toDataNewsListFlow()
+    override suspend fun getRecentNews(): List<DataNews> = withContext(Dispatchers.IO){
+        return@withContext newsDao.getAllNews().toDataNewsList()
     }
 
     override suspend fun getNewsById(dataNewsId: DataNewsId): DataNews {
@@ -27,7 +27,6 @@ class RoomNewsRepositoryImpl @Inject constructor(
 
     private fun DBNews.toDataNews() = DataNews(id, imageUrl, title, description)
     private fun List<DBNews>.toDataNewsList() = map { it.toDataNews() }
-    private fun Flow<List<DBNews>>.toDataNewsListFlow() = map { it.toDataNewsList() }
     private fun DataNews.toDBNews() = DBNews(id, imageUrl, title, description)
     private fun List<DataNews>.toDBNewsList() = map { it.toDBNews() }
 

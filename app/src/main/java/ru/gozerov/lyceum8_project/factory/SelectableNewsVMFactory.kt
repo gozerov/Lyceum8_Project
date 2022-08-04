@@ -8,6 +8,7 @@ import dagger.assisted.AssistedInject
 import ru.gozerov.domain.usecase.GetNewsByIdUseCase
 import ru.gozerov.lyceum8_project.viewmodel.SelectableNewsViewModel
 
+/*
 class SelectableNewsVMFactory @AssistedInject constructor(
     @Assisted("newsId") private val newsId: Long,
     private val getNewsByIdUseCase: GetNewsByIdUseCase
@@ -26,4 +27,4 @@ class SelectableNewsVMFactory @AssistedInject constructor(
 
     }
 
-}
+}*/

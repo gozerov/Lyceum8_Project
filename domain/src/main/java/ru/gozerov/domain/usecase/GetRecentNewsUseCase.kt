@@ -9,7 +9,7 @@ class GetRecentNewsUseCase @Inject constructor(
     private val newsRepository: NewsRepository
 ) {
 
-    suspend fun execute(): Flow<List<News>> {
+    suspend fun execute(): List<News> {
         newsRepository.firstInitialization()
         return newsRepository.getRecentNews()
     }

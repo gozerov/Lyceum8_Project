@@ -6,7 +6,7 @@ import ru.gozerov.lyceum8_project.data.cache.entity.DataNewsId
 
 interface RoomNewsRepository {
 
-    suspend fun getRecentNews() : Flow<List<DataNews>>
+    suspend fun getRecentNews() : List<DataNews>
 
     suspend fun getNewsById(dataNewsId: DataNewsId) : DataNews
 

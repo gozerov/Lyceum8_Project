@@ -6,16 +6,20 @@ import dagger.Component
 import ru.gozerov.lyceum8_project.screen.NewsRVFragment
 import ru.gozerov.lyceum8_project.screen.SelectableNewsFragment
 import ru.gozerov.lyceum8_project.singleton.App
-import ru.gozerov.lyceum8_project.splash.SplashActivity
-import javax.inject.Singleton
+/*
 
-@Singleton
-@Component(modules = [AppModule::class])
-interface AppComponent /*: DataDependencies */ {
+*/
+/*
+@Singleton*//*
 
+@Component(*/
+/*modules = [AppModule::class]*//*
+)
+interface AppComponent */
+/*: DataDependencies *//*
+ {
     fun inject(selectableNewsFragment: SelectableNewsFragment)
     fun inject(app: App)
-    fun inject(splashActivity: SplashActivity)
     fun inject(newsRVFragment: NewsRVFragment)
 
     @Component.Builder
@@ -25,9 +29,9 @@ interface AppComponent /*: DataDependencies */ {
 
         @BindsInstance
         fun context(context: Context): Builder
-
     }
 
 }
 
+*/
 

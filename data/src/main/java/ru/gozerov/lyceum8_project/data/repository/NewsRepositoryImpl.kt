@@ -22,8 +22,8 @@ class NewsRepositoryImpl @Inject constructor(
         roomNewsRepository.firstInitialization()
     }
 
-    override suspend fun getRecentNews(): Flow<List<News>> {
-        return roomNewsRepository.getRecentNews().toNewsListFlow()
+    override suspend fun getRecentNews(): List<News> {
+        return roomNewsRepository.getRecentNews().toNewsList()
     }
 
     private fun NewsId.toDataNewsId() = DataNewsId(id)

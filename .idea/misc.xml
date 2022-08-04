@@ -18,10 +18,19 @@
         <entry key="..\:/Android/sdk/Lyceum8_Project/app/src/main/res/layout/part_result.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/sdk/Lyceum8_Project/app/src/main/res/menu/hide_menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Android/sdk/Lyceum8_Project/app/src/main/res/menu/menu_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/drawable/splash.xml" value="0.1265" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/activity_main.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/activity_splash.xml" value="0.18425925925925926" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/fragment_news.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/fragment_profile.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/fragment_schools_structure.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/fragment_selectable_news.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/fragment_tabs.xml" value="0.25025641025641027" />
+        <entry key="..\:/Users/Grigory/AndroidStudioProjects/Lyceum8_Project/app/src/main/res/layout/news_rv_item.xml" value="0.264" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

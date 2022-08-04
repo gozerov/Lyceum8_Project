@@ -5,23 +5,22 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.navArgs
 import coil.load
 import coil.size.Scale
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import ru.gozerov.core.fragment.BaseFragment
 import ru.gozerov.lyceum8_project.R
 import ru.gozerov.lyceum8_project.databinding.FragmentSelectableNewsBinding
-import ru.gozerov.lyceum8_project.factory.SelectableNewsVMFactory
-import ru.gozerov.lyceum8_project.singleton.appComponent
 import ru.gozerov.lyceum8_project.viewmodel.SelectableNewsViewModel
 import javax.inject.Inject
 
-class SelectableNewsFragment : BaseFragment(R.layout.fragment_selectable_news) {
+class SelectableNewsFragment :/* BaseFragment(R.layout.fragment_selectable_news) */ Fragment(R.layout.fragment_selectable_news){
+/*
 
     private val args: SelectableNewsFragmentArgs by navArgs()
 
@@ -35,7 +34,7 @@ class SelectableNewsFragment : BaseFragment(R.layout.fragment_selectable_news) {
     private lateinit var binding: FragmentSelectableNewsBinding
 
     override fun onAttach(context: Context) {
-        context.appComponent.inject(this)
+        //context.appComponent.inject(this)
         super.onAttach(context)
     }
 
@@ -66,5 +65,6 @@ class SelectableNewsFragment : BaseFragment(R.layout.fragment_selectable_news) {
             }
         }
     }
+*/
 
 }

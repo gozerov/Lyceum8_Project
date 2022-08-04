@@ -35,9 +35,9 @@
             <action
                 android:id="@+id/action_newsRVFragment2_to_selectableNewsFragment"
                 app:destination="@id/selectableNewsFragment" />
-            <argument
+<!--            <argument
                 android:name="newsList"
-                app:argType="ru.gozerov.domain.entity.news.NewsList" />
+                app:argType="ru.gozerov.domain.entity.news.NewsList" />-->
         </fragment>
     </navigation>
     <fragment

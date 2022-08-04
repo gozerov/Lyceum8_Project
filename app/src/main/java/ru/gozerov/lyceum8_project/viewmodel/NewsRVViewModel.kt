@@ -27,12 +27,12 @@ class NewsRVViewModel(
 
     private fun load() = viewModelScope.launch {
         val handleNewsList = savedStateHandle.get<List<News>>("newsList")
-        getRecentNewsUseCase.execute().collect { newsList ->
+        /*getRecentNewsUseCase.execute().collect { newsList ->
             if (handleNewsList != newsList)
                 _newsList.tryEmit(SuccessResult(newsList))
             else
                 _newsList.emit(SuccessResult(handleNewsList))
-        }
+        }*/
     }
 
 }
