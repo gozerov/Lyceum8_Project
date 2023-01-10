@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
         minSdk 23
-        targetSdk 31
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -44,7 +44,6 @@ dependencies {
     testImplementation 'junit:junit:'
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
-    implementation 'androidx.fragment:fragment-ktx:1.4.0'
 
     //room
     implementation("androidx.room:room-runtime:$room_version")
@@ -59,4 +58,12 @@ dependencies {
 
     implementation "com.google.dagger:dagger:$dagger2_version"
     kapt("com.google.dagger:dagger-compiler:$dagger2_version")
+
+    implementation "org.jsoup:jsoup:1.13.1"
+
+    //gson
+    implementation 'com.google.code.gson:gson:2.9.1'
+
+    //jetpack paging 3
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
 }

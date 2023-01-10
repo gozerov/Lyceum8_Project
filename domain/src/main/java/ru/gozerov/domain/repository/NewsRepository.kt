@@ -1,15 +1,15 @@
 package ru.gozerov.domain.repository
 
-import kotlinx.coroutines.flow.Flow
-import ru.gozerov.domain.entity.news.News
-import ru.gozerov.domain.entity.news.NewsId
+import androidx.paging.PagingSource
+import ru.gozerov.domain.entity.news.DomainNews
 
 interface NewsRepository: Repository {
 
-    suspend fun getNewsById(newsId: NewsId) : News
+    suspend fun getNewsById(newsUrl: String) : DomainNews
 
-    suspend fun firstInitialization()
+    fun getRecentNews() : PagingSource<Int, DomainNews>
 
-    suspend fun getRecentNews() : Flow<List<News>>
+    suspend fun initNews(onUpdateEnded: () -> Unit)
+
 
 }

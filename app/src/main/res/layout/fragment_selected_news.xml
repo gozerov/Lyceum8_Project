@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/scrollContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:background="@drawable/selected_news_background"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/newsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:background="@drawable/news_background"
+        android:layout_marginVertical="16dp"
+        android:orientation="vertical"
+        android:paddingVertical="16dp"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            style="@style/CircularProgressBarStyle"
+            android:id="@+id/loadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/txtTitleOfNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            tools:text="Example Title"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:background="@drawable/title_background"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="12dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txtDescriptionOfNews"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            tools:text="Lorem ipsum"
+            android:textSize="20sp"
+            android:fontFamily="@font/google_sans_regular"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            android:autoLink="all"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtPhotos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photos"
+            android:layout_marginStart="24dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgNews"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:background="@color/grey_200"
+            android:scaleType="fitCenter"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/newsImagesViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:background="@color/grey_200"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/errorContainer"
+        layout="@layout/error_state"
+        android:visibility="gone"/>
+
+</FrameLayout>

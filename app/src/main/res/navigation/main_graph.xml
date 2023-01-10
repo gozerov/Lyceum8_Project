@@ -3,16 +3,51 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/tabsFragment">
+    app:startDestination="@id/newsListFragment">
 
     <fragment
-        android:id="@+id/tabsFragment"
-        android:name="ru.gozerov.lyceum8_project.screen.TabsFragment"
+        android:id="@+id/newsListFragment"
+        android:name="ru.gozerov.lyceum8.screens.news_list.NewsListFragment"
         android:label="TabsFragment"
-        tools:layout="@layout/fragment_tabs">
+        tools:layout="@layout/fragment_news">
 
     <argument
         android:name="newsList"
-        app:argType="ru.gozerov.domain.entity.news.NewsList" />
+        app:argType="ru.gozerov.lyceum8.screens.news_list.models.NewsList" />
+        <action
+            android:id="@+id/action_newsListFragment_to_selectedNewsFragment"
+            app:destination="@id/selectedNewsFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
     </fragment>
+    <fragment
+        android:id="@+id/selectedNewsFragment"
+        android:name="ru.gozerov.lyceum8.screens.selected_news.SelectedNewsFragment"
+        android:label="SelectedNewsFragment"
+        tools:layout="@layout/fragment_selected_news">
+        <action
+            android:id="@+id/action_selectedNewsFragment_to_galleryFragment"
+            app:destination="@id/galleryFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/galleryFragment"
+        android:name="ru.gozerov.lyceum8.screens.gallery.GalleryFragment"
+        android:label="GalleryFragment"
+        tools:layout="@layout/fragment_gallery">
+        <argument
+            android:name="images"
+            app:argType="string[]" />
+    </fragment>
+    <dialog
+        android:id="@+id/updateAppDialog"
+        android:name="ru.gozerov.lyceum8.screens.update_app.UpdateAppDialog"
+        android:label="UpdateAppDialog"
+        tools:layout="@layout/dialog_update_app"/>
+
 </navigation>

@@ -1,5 +1,5 @@
 package ru.gozerov.domain.entity.news
 
 data class NewsId(
-    val id: Long
+    val id: Int
 )

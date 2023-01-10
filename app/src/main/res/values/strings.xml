@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">Наш Лицей</string>
-    <string name="rename">Изменить \n профиль</string>
-    <string name="user_has_been_renamed">Student has been renamed</string>
-    <string name="default_title">App</string>
-    <string name="current_student">Текущий ученик: %1$s</string>
-    <string name="error_please_try_again">Error! Please try again.</string>
-    <string name="try_again">Try again</string>
-    <string name="message">MESSAGE</string>
-
-    <string name="profile_rus">Профиль</string>
     <string name="news_rus">Новости</string>
-    <string name="library_rus">Библиотека</string>
-    <string name="schools_structure_rus">Структура и органы управления образовательной организацией</string>
+    <string name="photos">Фотографии</string>
+    <string name="update">Обновить</string>
+    <string name="error_text">Упс… Произошла ошибка.\nПопробуйте загрузить данные ещё раз!</string>
+    <string name="update_app_topic">update_app</string>
+    <string name="new_update_is_coming">Доступна новая версия приложения</string>
+    <string name="cancel">Отмена</string>
+    <string name="link_google_play">https://play.google.com/store/apps/details?id=ru.gozerov.lyceum8</string>
+    <string name="current_page_is">%1$d из %2$d</string>
+    <string name="alert">Уведомление</string>
+    <string name="please_allow_notifications">Разрешите, пожалуйста, отправку уведомлений, иначе Вы можете пропустить важное обновление.</string>
+    <string name="allow">Разрешить</string>
 </resources>
