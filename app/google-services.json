@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "182764416131",
+    "project_id": "lyceum-8",
+    "storage_bucket": "lyceum-8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182764416131:android:f8daf1696cd9b83d2bffb6",
+        "android_client_info": {
+          "package_name": "ru.gozerov.lyceum8"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "182764416131-1md23pe1jnmgiddi91f63l99q628o9di.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLIJ8_x9KfZkez6ij2_tsIvjDGaaiuxHM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "182764416131-1md23pe1jnmgiddi91f63l99q628o9di.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_background">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtNewUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/new_update_is_coming"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"/>
+
+    <Space
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/updateButton"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtNewUpdate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/center"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/update"
+        android:textColor="@color/teal_900"
+        android:textStyle="bold"
+        android:textSize="24sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/cancelButton"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtNewUpdate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/center"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        android:textSize="24sp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
